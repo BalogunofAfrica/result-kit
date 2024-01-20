@@ -1,6 +1,7 @@
 {
   "name": "result-kit",
   "version": "0.0.1",
+  "description": "A type-safe minimal Implementation of a Result for Typescript/JavaScript",
   "module": "src/index.ts",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -16,5 +17,17 @@
     "build": "bun build --target=node ./src/index.ts --outfile=dist/index.js && bun run build:declaration",
     "build:declaration": "tsc --emitDeclarationOnly --project tsconfig.types.json",
     "postbuild": "rimraf tsconfig.types.tsbuildinfo"
-  }
+  },
+  "keywords": [
+    "result",
+    "result-kit",
+    "error handling"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BalogunofAfrica/result-kit"
+  },
+  "author": "BalogunOfAfrica",
+  "homepage": "https://github.com/BalogunofAfrica",
+  "license": "MIT"
 }
