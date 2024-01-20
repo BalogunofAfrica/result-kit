@@ -33,10 +33,10 @@ function parseJson(result: unknown): unknown {
   return JSON.parse(result);
 }
 
-await function runExample() {
+async function runExample() {
   const dogs = await fetchDogs();
   parseJson(dogs);
-};
+}
 ```
 
 The major problem with the implementation above is that the function signature doesn't indicate to the caller that it might throw an error so the developer might not get to handle the scenario where there is an error and would only find out when they run the piece of code.
@@ -56,7 +56,7 @@ function parseJson(result): Result<unknown, Error> {
   return runSync(() => JSON.parse(result));
 }
 
-await function runExample() {
+async function runExample() {
   const dogsResult = await fetchDogs();
 
   if (!dogsResult.ok) {
@@ -65,7 +65,7 @@ await function runExample() {
   }
 
   parseJson(dogsResult.value);
-};
+}
 ```
 
 With Results the function signature tells the caller that it returns a result which the caller has to check if the `ok` field is `true` (success) to be able to use (unwrap) the `value` field, otherwise `ok` is `false` (failure) and we can also access the `error` field with the appropriate error.
