@@ -2,6 +2,26 @@
 
 A minimal typescript implementation of a result type. Inspired by [Rust's Result](https://doc.rust-lang.org/book/ch09-02-recoverable-errors-with-result.html "Rust Result").
 
+## Installation:
+
+To install `result-kit` run:
+
+```sh
+bun install result-kit
+```
+
+Or
+
+```sh
+yarn add result-kit
+```
+
+Or
+
+```sh
+npm install result-kit
+```
+
 ## Before:
 
 ```ts
