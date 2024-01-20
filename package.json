@@ -1,6 +1,6 @@
 {
   "name": "result-kit",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A type-safe minimal Implementation of a Result for Typescript/JavaScript",
   "module": "src/index.ts",
   "main": "dist/index.js",
