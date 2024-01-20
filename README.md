@@ -39,7 +39,7 @@ await function runExample() {
 };
 ```
 
-The major problem with the implementation above is that the function signature doesn't indicate to the caller that they might throw an error so the developer might not get to handle the scenario where there is an error and would only find out when they run the piece of code.
+The major problem with the implementation above is that the function signature doesn't indicate to the caller that it might throw an error so the developer might not get to handle the scenario where there is an error and would only find out when they run the piece of code.
 
 ## With Results:
 
